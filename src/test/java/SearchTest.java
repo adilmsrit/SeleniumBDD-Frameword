@@ -1,13 +1,25 @@
 import org.testng.annotations.Test;
+import pSight.pages.CoursePage;
 import pSight.pages.HomePage;
+import pSight.pages.SearchPage;
 
 public class SearchTest extends BaseTestClass {
-  //code from another person
 
-    HomePage homePage = new HomePage();
+
+    SearchPage search = new SearchPage();
+    HomePage home = new HomePage();
+    CoursePage course = new CoursePage();
 
     @Test
     public void basicFilterByTest() {
-        homePage.search("Java");
+        home.search("Java");
+        search.filterBySkillLevel("Beginner")
+                .filterByRole("Software Development")
+                .selectTabCourse()
+                .selectCourse("Java Fundamentals: The Java");
+
+        course.verifyCoursePreviewIsDisplayed()
+                .verifyFreeTrialIsDisplayed();
+
     }
 }
