@@ -3,14 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
     <test name="FluentSelenium(failed)">
         <classes>
-            <class name="SearchTest">
+            <class name="Code.SearchTest">
                 <methods>
                     <include name="basicFilterByTest"/>
                     <include name="goToHome"/>
                     <include name="startBrowser"/>
                     <include name="closeBrowser"/>
                 </methods>
-            </class> <!-- SearchTest -->
+            </class> <!-- Code.SearchTest -->
         </classes>
     </test> <!-- FluentSelenium(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

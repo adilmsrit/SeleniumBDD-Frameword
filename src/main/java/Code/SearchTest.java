@@ -1,7 +1,8 @@
+package Code;
+
 import org.testng.annotations.Test;
 import pSight.pages.*;
 
-import static pSight.pages.CoursePage.getCoursePage;
 import static pSight.pages.CommonVerification.getCommonVerification;
 import static pSight.pages.CoursePage.*;
 import static pSight.pages.HomePage.getHomePage;
