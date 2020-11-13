@@ -13,14 +13,14 @@ import static pSight.DriverFactory.getWebDriverWait;
 
 public class LoginPage {
 
-    public WebDriver ldriver;
-    WebDriverWait wait;
+    public WebDriver webDriver;
+    WebDriverWait webDriverWait;
 
     public LoginPage(WebDriver rdriver) {
-        ldriver = rdriver;
-        ldriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        ldriver.manage().window().maximize();
-        wait = getWebDriverWait();
+        webDriver = rdriver;
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().window().maximize();
+        webDriverWait = getWebDriverWait();
         PageFactory.initElements(rdriver, this);
     }
 
@@ -62,6 +62,11 @@ public class LoginPage {
     public LoginPage clickLogout(){
         lnkLogout.click();
         return this;
+    }
+
+
+    public String getPageTitle(){
+        return webDriver.getTitle();
     }
 
 
