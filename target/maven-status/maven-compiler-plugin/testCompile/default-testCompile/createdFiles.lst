@@ -1,3 +1,5 @@
-StepDefenitions\Steps.class
+allureReports\Tests.class
 pageObjects\LoginPage.class
-StepDefenitions\MyStepdefs.class
+stepDefenitions\Steps.class
+stepDefenitions\MyStepdefs.class
+testRunner\TestRun.class
