@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-import static pSight.DriverFactory.getWebDriverWait;
 
 public class LoginPage {
 
@@ -20,8 +19,7 @@ public class LoginPage {
         webDriver = rdriver;
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         webDriver.manage().window().maximize();
-        webDriverWait = getWebDriverWait();
-        PageFactory.initElements(rdriver, this);
+        PageFactory.initElements(webDriver, this);
     }
 
 

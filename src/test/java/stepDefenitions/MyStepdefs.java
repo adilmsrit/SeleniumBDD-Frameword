@@ -1,11 +1,11 @@
-package StepDefenitions;
+package stepDefenitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import pSight.DriverFactory;
 import pageObjects.LoginPage;
 
 public class MyStepdefs {
@@ -15,7 +15,9 @@ public class MyStepdefs {
 
     @Given("User launches chrome browser")
     public void user_launches_chrome_browser() {
-        driver = DriverFactory.getChromeDriver();
+//        driver = DriverFactory.getChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
+        driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
     }
 
